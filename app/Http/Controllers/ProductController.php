@@ -133,6 +133,7 @@ class ProductController extends Controller
             'description'=> 'required|min:10|max:500',
             'status'=>'required|in:For Sale,Not For Sale,Sold,',
             'price' => 'required',
+            'slug' => 'required',
             'discount' => 'required',
             'publish_at'=>'required|date',
         ]);
