@@ -104,7 +104,6 @@ class CategoryController extends Controller
         return redirect('category')->with('Success', 'Category has been deleted');
     }
 
-
     /**
      * Display a listing of the resource.
      *
@@ -118,5 +117,4 @@ class CategoryController extends Controller
 
         return view('homepages.home', compact('products', 'cat'));
     }
-
 }

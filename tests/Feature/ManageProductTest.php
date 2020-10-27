@@ -2,13 +2,13 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
-use App\Models\Product;
 use App\Models\Category;
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Foundation\Testing\WithFaker;
+use App\Models\Product;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
+use Tests\TestCase;
 
 class ManageProductTest extends TestCase
 {
@@ -68,7 +68,6 @@ class ManageProductTest extends TestCase
     /** @test */
     public function a_product_can_belong_to_a_category()
     {
-
         $category = factory(Category::class)->create();
         $product = factory(Product::class)->create();
 
@@ -76,10 +75,9 @@ class ManageProductTest extends TestCase
 
         $this->assertDatabaseHas('category_product', [
             'category_id' => $category->id,
-            'Product_id' => $product->id
+            'Product_id' => $product->id,
         ]);
     }
-
 
     private function data()
     {

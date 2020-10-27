@@ -2,11 +2,11 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
-use App\Models\Product;
 use App\Models\Category;
-use Illuminate\Foundation\Testing\WithFaker;
+use App\Models\Product;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Tests\TestCase;
 
 class ManageCategoriesTest extends TestCase
 {
@@ -44,17 +44,15 @@ class ManageCategoriesTest extends TestCase
         $response->assertStatus(200);
     }
 
-
     /** @test */
     public function a_guest_can_view_products_by_category()
     {
-
         $category = factory(Category::class)->create();
         $product = factory(Product::class)->create();
 
         $category->products()->sync($product);
 
-        $response = $this->get('/bycategory/'. $category->id);
+        $response = $this->get('/bycategory/'.$category->id);
         $response->assertSee($product->title);
     }
 }
