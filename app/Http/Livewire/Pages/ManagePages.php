@@ -57,7 +57,7 @@ class ManagePages extends Component
     public function edit($id)
     {
         $editpage = Page::find($id);
-        
+
         $this->thisid = $editpage->id;
         $this->name = $editpage->name;
         $this->title = $editpage->title;
