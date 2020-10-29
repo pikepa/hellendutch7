@@ -3,8 +3,8 @@
 namespace Database\Factories;
 
 use App\Models\Page;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Facades\Auth;
 
 class PageFactory extends Factory
 {

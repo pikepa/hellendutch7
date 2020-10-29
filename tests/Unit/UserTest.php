@@ -21,7 +21,7 @@ class UserTest extends TestCase
     /** @test */
     public function an_admin_user_is_an_admin()
     {
-        $admin =User::factory()->create(['type' => 'admin']);
+        $admin = User::factory()->create(['type' => 'admin']);
 
         $this->assertTrue($admin->isAdmin());
     }

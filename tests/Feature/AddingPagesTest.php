@@ -15,7 +15,7 @@ class AddingPagesTest extends TestCase
     /** @test */
     public function page_management_contains_livewire_componet()
     {
-        $user = User::factory()->create();;
+        $user = User::factory()->create();
 
         $this->actingAs($user)
         ->get('/dashboard')

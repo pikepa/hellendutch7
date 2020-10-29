@@ -15,7 +15,7 @@ class ManageUserDetailsTest extends TestCase
     {
         $this->withoutExceptionHandling();
 
-        $user =User::factory()->create();
+        $user = User::factory()->create();
 
         $this->actingAs($user);
 
@@ -36,7 +36,6 @@ class ManageUserDetailsTest extends TestCase
     {
         $user = User::factory()->create();
         $user2 = User::factory()->create();
-
 
         $this->actingAs($user);
 
