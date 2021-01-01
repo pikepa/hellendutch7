@@ -16,7 +16,8 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::orderBy('publish_at', 'desc')->get();
-        $cat='';
+        $cat = '';
+
         return view('homepages.home', compact('products', 'cat'));
     }
 
@@ -30,7 +31,7 @@ class ProductController extends Controller
         $products = Product::OfStatus($status)->get();
         $cat = '';
 
-        return view('homepages.home', compact('products','cat'));
+        return view('homepages.home', compact('products', 'cat'));
     }
 
     /**
@@ -70,7 +71,7 @@ class ProductController extends Controller
     {
         $product = Product::findorFail($id);
         $images = $product->getMedia('photos');
-     //   dd($images);
+        //   dd($images);
 
         $foundcats = $product->categories;
         $assignedCats = $product->categories->pluck('id')->toArray();

@@ -34,9 +34,9 @@ return [
         /*
          * The domain that should be prepended when generating urls.
          */
-        'domain' => 'https://' . env('AWS_URL'),
+        'domain' => 'https://'.env('AWS_URL'),
     ],
-    
+
     'remote' => [
         /*
          * Any extra headers that should be included when uploading media to
