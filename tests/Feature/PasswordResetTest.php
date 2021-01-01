@@ -3,12 +3,10 @@
 namespace Tests\Feature;
 
 use App\Models\User;
-use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
-use Notification;
 use Password;
 use Tests\TestCase;
 
@@ -82,6 +80,5 @@ class PasswordResetTest extends TestCase
             ])
             ->assertSuccessful()
             ->assertSee(e(__('passwords.sent')));
-
     }
 }
