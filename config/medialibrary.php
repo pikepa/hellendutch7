@@ -29,7 +29,7 @@ return [
         /*
          * The domain that should be prepended when generating urls.
          */
-        'domain' => 'https://' . env('AWS_URL'),
+        'domain' => 'https://'.env('AWS_URL'),
     ],
 
     'remote' => [
