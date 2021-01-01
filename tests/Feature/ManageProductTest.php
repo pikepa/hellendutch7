@@ -23,9 +23,10 @@ class ManageProductTest extends TestCase
         $response = $this->get('/product/1')
                 ->assertStatus(200)
                 ->assertSee('Cool Book Title');
-                
+
         $this->assertCount(1, Product::all());
     }
+
     /** @test */
     public function a_product_can_be_added()
     {
