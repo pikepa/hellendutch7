@@ -26,6 +26,6 @@ class DashLeft extends Component
      */
     public function render()
     {
-        return view('components.layout.dash-left',);
+        return view('components.layout.dash-left', );
     }
 }
