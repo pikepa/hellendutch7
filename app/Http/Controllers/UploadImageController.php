@@ -28,7 +28,7 @@ class UploadImageController extends Controller
         ]);
 
         $product = Product::find($request->product_id);
-        
+
         $product->addMediaFromRequest('image')
                 ->toMediaCollection('photos', 's3');
 
