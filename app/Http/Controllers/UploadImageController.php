@@ -15,7 +15,7 @@ class UploadImageController extends Controller
     {
         $this->middleware('auth')->except('show');
     }
-    
+
     public function load($product_id)
     {
         return view('images.upload', compact('product_id'));

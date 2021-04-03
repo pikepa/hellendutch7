@@ -2,22 +2,22 @@
 
 namespace App\Http\Livewire\Images;
 
-use App\Models\Todo;
 use App\Models\Product;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
 class Upload extends Component
 {
-use WithFileUploads;
+    use WithFileUploads;
 
-public $fileTitle, $fileName, $product_id;
+    public $fileTitle;
+    public $fileName;
+    public $product_id;
 
     public function mount($product)
     {
         $this->product_id = $product->id;
     }
-
 
     public function submit()
     {
@@ -31,11 +31,11 @@ public $fileTitle, $fileName, $product_id;
                 ->usingName($this->fileName->getClientOriginalName())
                 ->toMediaCollection('photos', 's3');
 
-            return redirect('/product/' . $this->product_id);
+        return redirect('/product/'.$this->product_id);
     }
 
     public function render()
     {
-    return view('livewire.images.upload');
+        return view('livewire.images.upload');
     }
 }

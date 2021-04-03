@@ -2,21 +2,19 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
 use App\Models\User;
-use Livewire\Livewire;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
-use App\Http\Livewire\Images\LoadImages;
-use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Livewire\Livewire;
+use Tests\TestCase;
 
 class ManageFileUploadTest extends TestCase
 {
     use  RefreshDatabase;
 
     /** @test */
-    function can_upload_image()
+    public function can_upload_image()
     {
         $user = User::factory()->create();
 
