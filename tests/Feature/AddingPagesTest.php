@@ -3,7 +3,6 @@
 namespace Tests\Feature;
 
 use App\Models\Page;
-use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Livewire\Livewire;
 use Tests\TestCase;
@@ -11,7 +10,6 @@ use Tests\TestCase;
 class AddingPagesTest extends TestCase
 {
     use RefreshDatabase;
-
 
     /** @test */
     public function can_add_pages()
@@ -24,7 +22,6 @@ class AddingPagesTest extends TestCase
 
         $this->assertTrue(Page::whereName('About Me')->exists());
     }
-
 
     /** @test */
     public function name_is_unique()
