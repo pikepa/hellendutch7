@@ -1,5 +1,4 @@
 <?php
-
 use App\Http\Livewire\User\Profile;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -11,7 +10,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\UploadImageController;
 use App\Http\Livewire\Messages\DisplayMessages;
 
-    Route::redirect('/', 'root');
+ //   Route::redirect('/', 'root');
 
 
     /**
