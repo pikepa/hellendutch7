@@ -18,7 +18,7 @@ class ManageProductTest extends TestCase
     public function a_product_detail_can_be_viewed()
     {
         $this->signIn();
-        $product=Product::factory()->create();
+        $product = Product::factory()->create();
 
         $response = $this->get('/product/'.$product->id)
                 ->assertStatus(200)
@@ -33,9 +33,9 @@ class ManageProductTest extends TestCase
         $this->signIn();
 
         $response = $this->post('/product', $this->data());
-       
+
         $product = Product::first();
-      //  dd($product);
+        //  dd($product);
         $response->assertRedirect($product->path());
         $this->assertCount(1, Product::all());
     }
@@ -67,14 +67,14 @@ class ManageProductTest extends TestCase
     {
         $this->signIn();
 
-        $product=Product::factory()->create();
+        $product = Product::factory()->create();
 
         $this->assertCount(1, Product::all());
 
         $response = $this->delete('/product/'.$product->id);
-// dd(Product::count());
+        // dd(Product::count());
         $this->assertCount(0, Product::all());
-     //   $response->assertRedirect('/');
+        //   $response->assertRedirect('/');
     }
 
     /** @test */
