@@ -58,7 +58,7 @@ class ManageProductTest extends TestCase
             'owner_id'=>Auth::id(),
         ]);
         $this->assertEquals('Changed Title', Product::first()->title);
-        $this->assertEquals(1, Product::first()->id);
+        $this->assertEquals(1, Product::count());
         $response->assertRedirect($product->fresh()->path());
     }
 
@@ -72,7 +72,7 @@ class ManageProductTest extends TestCase
         $this->assertCount(1, Product::all());
 
         $response = $this->delete('/product/'.$product->id);
-dd(Product::count());
+// dd(Product::count());
         $this->assertCount(0, Product::all());
      //   $response->assertRedirect('/');
     }

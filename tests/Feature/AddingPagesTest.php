@@ -17,7 +17,7 @@ class AddingPagesTest extends TestCase
         Livewire::test('pages.manage-pages')
             ->set('name', 'About Me')
             ->set('title', 'Hellen Dutch')
-            ->set('active', 'false')
+            ->set('active', 0)
             ->call('add');
 
         $this->assertTrue(Page::whereName('About Me')->exists());
@@ -49,7 +49,7 @@ class AddingPagesTest extends TestCase
             'name' => 'Albert',
             'slug' => 'albert',
             'title' => 'Fred',
-            'active' => true,
+            'active' => 1,
             'owner_id' => 1,
         ]);
 
@@ -92,12 +92,12 @@ class AddingPagesTest extends TestCase
             ->call('edit', $page->id)
             ->set('name', 'AboutMe')
             ->set('title', 'Hellen Dutch')
-            ->set('active', 'true')
+            ->set('active', 1)
             ->call('update');
 
         $page = Page::find($page->id);
         $this->assertEquals('AboutMe', $page->name);
         $this->assertEquals('Hellen Dutch', $page->title);
-        $this->assertEquals('true', $page->active);
+        $this->assertEquals(1, $page->active);
     }
 }
