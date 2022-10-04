@@ -14,7 +14,7 @@ class ProductTest extends TestCase
     /** @test */
     public function it_has_a_path()
     {
-        //    $this->withoutExceptionHandling();
+            $this->withoutExceptionHandling();
         $product = Product::factory()->create();
         $this->assertEquals('/product/'.$product->id, $product->path());
     }

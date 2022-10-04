@@ -18,11 +18,11 @@ class ManageProductTest extends TestCase
     public function a_product_detail_can_be_viewed()
     {
         $this->signIn();
+        $product=Product::factory()->create();
 
-        $response = $this->post('/product', $this->data());
-        $response = $this->get('/product/1')
+        $response = $this->get('/product/'.$product->id)
                 ->assertStatus(200)
-                ->assertSee('Cool Book Title');
+                ->assertSee($product->title);
 
         $this->assertCount(1, Product::all());
     }
@@ -30,12 +30,12 @@ class ManageProductTest extends TestCase
     /** @test */
     public function a_product_can_be_added()
     {
-        $this->withoutExceptionHandling();
-
         $this->signIn();
 
         $response = $this->post('/product', $this->data());
+       
         $product = Product::first();
+      //  dd($product);
         $response->assertRedirect($product->path());
         $this->assertCount(1, Product::all());
     }
@@ -65,17 +65,16 @@ class ManageProductTest extends TestCase
     /** @test */
     public function a_product_can_be_deleted()
     {
-        $this->withoutExceptionHandling();
-
         $this->signIn();
 
-        $this->post('/product', $this->data());
-        $product = Product::first();
+        $product=Product::factory()->create();
 
         $this->assertCount(1, Product::all());
-        $response = $this->delete($product->path());
+
+        $response = $this->delete('/product/'.$product->id);
+dd(Product::count());
         $this->assertCount(0, Product::all());
-        $response->assertRedirect('/');
+     //   $response->assertRedirect('/');
     }
 
     /** @test */
