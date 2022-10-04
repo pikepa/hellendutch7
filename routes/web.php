@@ -1,17 +1,20 @@
 <?php
 
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\UploadImageController;
-use App\Http\Controllers\UserController;
-use App\Http\Livewire\Dashboard\Dashboard;
-use App\Http\Livewire\Messages\ContactMe;
-use App\Http\Livewire\Messages\DisplayMessages;
 use App\Http\Livewire\User\Profile;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Livewire\Messages\ContactMe;
+use App\Http\Livewire\Dashboard\Dashboard;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\UploadImageController;
+use App\Http\Livewire\Messages\DisplayMessages;
 
-Route::redirect('/', 'root');
-Route::mediaLibrary();
-/**
+    Route::redirect('/', 'root');
+
+
+    /**
  * App Routes.
  */
 Route::group(['middleware' => 'auth'], function () {
