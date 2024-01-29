@@ -11,7 +11,7 @@ use App\Http\Livewire\User\Profile;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
- //   Route::redirect('/', 'root');
+//   Route::redirect('/', 'root');
 
 /**
  * App Routes.

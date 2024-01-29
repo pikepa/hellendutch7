@@ -75,6 +75,7 @@ class ProductController extends Controller
 
         $foundcats = $product->categories;
         $assignedCats = $product->categories->pluck('id')->toArray();
+
         //     dd($assignedCats);
         return view('products.product_detail', compact('product', 'images', 'foundcats'));
     }
@@ -119,8 +120,7 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-
-     //   $this->authorize('manage', $product);
+        //   $this->authorize('manage', $product);
 
         $product->delete();
 
