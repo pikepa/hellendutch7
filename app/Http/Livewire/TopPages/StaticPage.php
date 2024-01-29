@@ -8,6 +8,7 @@ use Livewire\Component;
 class StaticPage extends Component
 {
     public $paras = [];
+
     public $page;
 
     public function mount($page)

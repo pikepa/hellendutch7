@@ -16,17 +16,18 @@
     ],
 
     "require": {
-        "php": "^8.1.1",
-        "doctrine/dbal": "^2.9",
-        "fideloper/proxy": "^4.0",
-        "laravel/framework": "^9.0",
+        "php": "^8.2",
+        "aws/aws-sdk-php": "^3.262",
+        "doctrine/dbal": "^3.0",
+        "guzzlehttp/guzzle": "^7.2",
+        "laravel/framework": "^10.0",
         "laravel/helpers": "^1.2",
-        "laravel/sail": "^1.16",
+        "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.0",
-        "laravel/ui": "^3.0",
+        "laravel/ui": "^4.4",
         "league/flysystem-aws-s3-v3": "^3.5",
         "livewire/livewire": "^2.0",
-        "spatie/laravel-ignition": "^1.0",
+        "spatie/laravel-ignition": "2.0",
         "spatie/laravel-medialibrary": "^10.0.0",
         "symfony/mailer": "^6.0"
     },
@@ -36,11 +37,12 @@
         "fakerphp/faker": "^1.13",
         "filp/whoops": "^2.0",
         "mockery/mockery": "^1.0",
-        "nunomaduro/collision": "^6.1",
-        "pestphp/pest": "^1.21",
-        "pestphp/pest-plugin-laravel": "^1.2",
-        "pestphp/pest-plugin-livewire": "^1.0",
-        "phpunit/phpunit": "^9.0"
+        "nunomaduro/collision": "^7.2.0",
+        "pestphp/pest": "^2.0",
+        "pestphp/pest-plugin-faker": "^2.0",
+        "pestphp/pest-plugin-laravel": "^2.0",
+        "pestphp/pest-plugin-livewire": "^2.0",
+        "phpunit/phpunit": "10.5.7"
     },
     "config": {
         "optimize-autoloader": true,
@@ -69,7 +71,6 @@
             "Tests\\": "tests/"
         }
     },
-    "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
         "post-autoload-dump": [

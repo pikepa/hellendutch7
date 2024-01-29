@@ -8,9 +8,13 @@ use Livewire\Component;
 class ContactMe extends Component
 {
     public $name;
+
     public $email;
+
     public $subject;
+
     public $content;
+
     public $my_question;
 
     public function render()
@@ -34,10 +38,10 @@ class ContactMe extends Component
         $message = new Message;
 
         Message::create([
-            'name' =>$this->name,
-            'email' =>$this->email,
-            'subject' =>$this->subject,
-            'content' =>$this->content,
+            'name' => $this->name,
+            'email' => $this->email,
+            'subject' => $this->subject,
+            'content' => $this->content,
         ]);
 
         return redirect('/');

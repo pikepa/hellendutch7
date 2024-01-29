@@ -7,6 +7,7 @@ use Livewire\Component;
 class Dashboard extends Component
 {
     public $pagesmode = 0;
+
     public $hasfocus = 'focus:outline-none focus:bg-gray-200 transition ease-in-out duration-150';
 
     public function render()

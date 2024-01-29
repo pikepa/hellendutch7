@@ -8,12 +8,19 @@ use Livewire\Component;
 class DisplayMessages extends Component
 {
     public $messages = [];
+
     public $detail = [];
+
     public $readMode = false;
+
     public $email;
+
     public $name;
+
     public $subject;
+
     public $content;
+
     public $messageId;
 
     public function render()

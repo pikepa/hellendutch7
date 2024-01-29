@@ -11,7 +11,9 @@ class Upload extends Component
     use WithFileUploads;
 
     public $fileTitle;
+
     public $fileName;
+
     public $product_id;
 
     public function mount($product)

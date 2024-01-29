@@ -8,8 +8,11 @@ use Livewire\Component;
 class DisplayLikes extends Component
 {
     public $count = 0;
+
     public $prodid;
+
     public $product;
+
     public $liked = false;
 
     public function mount($likes, $prodid)

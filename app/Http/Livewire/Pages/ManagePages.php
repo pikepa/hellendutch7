@@ -10,16 +10,27 @@ use Livewire\Component;
 class ManagePages extends Component
 {
     public $name;
+
     public $slug;
+
     public $featured_img;
+
     public $title;
+
     public $pages;
+
     public $thisid;
+
     public $currentuser;
+
     public $updateMode = false;
+
     public $active = 0;
+
     public $addPageVisible = false;
+
     public $owner_id;
+
     public $templates;
 
     public function render()
