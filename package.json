@@ -13,9 +13,6 @@
         "@tailwindcss/custom-forms": "^0.1.4",
         "axios": "^0.21.2",
         "cross-env": "^5.2.1",
-        "laravel-mix": "^4.1.4",
-        "laravel-mix-purgecss": "^4.2.0",
-        "laravel-mix-tailwind": "^0.1.0",
         "lodash": "^4.17.21",
         "popper.js": "^1.16.1",
         "resolve-url-loader": "^2.3.1",
@@ -23,8 +20,12 @@
         "sass-loader": "^7.3.1",
         "tailwindcss": "^1.4.6",
         "tailwindcss-plugins": "^0.1.5",
-        "vue": "^2.6.11",
-        "vue-template-compiler": "^2.6.11"
+        "vue": "^2.7.0",
+        "vue-template-compiler": "^2.6.11",
+        "vite": "^3.0.2",
+        "laravel-vite-plugin": "^0.6.0",
+        "@vitejs/plugin-vue2": "^1.1.2",
+        "autoprefixer": "^10.4.0"
     },
     "dependencies": {
         "@tailwindcss/typography": "^0.1.2",
