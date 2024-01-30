@@ -15,7 +15,6 @@ class DisplayLikes extends Component
     public function mount($likes, $prodid)
     {
         $this->count = $likes;
-        $this->startCount = $likes;
         $this->prodid = $prodid;
     }
 
