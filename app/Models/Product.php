@@ -13,7 +13,9 @@ class Product extends Model implements HasMedia
     use InteractsWithMedia, HasFactory;
   //  use HasFactory;
 
-    protected $dates = ['publish_at'];
+  protected $casts = [
+    'publish_at' => 'datetime:Y-m-d',
+    ];
 
     protected $guarded = [];
 
