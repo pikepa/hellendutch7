@@ -53,7 +53,7 @@ class MessageController extends Controller
             'email' => 'email|required',
             'name' => 'required|min:5',
             'subject' => 'required|min:5',
-            'content'=>'required|min:10',
+            'content' => 'required|min:10',
         ]);
 
         $message = new Message;
