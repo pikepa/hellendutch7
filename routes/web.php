@@ -10,7 +10,7 @@ use App\Http\Livewire\Messages\DisplayMessages;
 use App\Http\Livewire\User\Profile;
 
 Route::redirect('/', 'root');
-Route::mediaLibrary();
+// Route::mediaLibrary();
 /**
  * App Routes.
  */
@@ -56,14 +56,14 @@ Route::resource('category', CategoryController::class);
 
 Auth::routes();
 
-Route::name('images.')->group(function () {
-    Route::get('/images', [UploadImageController::class, 'index'])->name('index');
-    Route::get('/images/{product}/load', [UploadImageController::class, 'load'])->name('load');
-    Route::get('/images/{product}/{image}/delete', [UploadImageController::class, 'delete'])->name('delete');
-    Route::get('/images/{product}/{image}/featured', [UploadImageController::class, 'featured'])->name('makefeatured');
-    Route::get('/images/{image}', [UploadImageController::class, 'show'])->name('show');
-    Route::post('/images/upload', [UploadImageController::class, 'upload'])->name('upload');
-});
+// Route::name('images.')->group(function () {
+//     Route::get('/images', [UploadImageController::class, 'index'])->name('index');
+//     Route::get('/images/{product}/load', [UploadImageController::class, 'load'])->name('load');
+//     Route::get('/images/{product}/{image}/delete', [UploadImageController::class, 'delete'])->name('delete');
+//     Route::get('/images/{product}/{image}/featured', [UploadImageController::class, 'featured'])->name('makefeatured');
+//     Route::get('/images/{image}', [UploadImageController::class, 'show'])->name('show');
+//     Route::post('/images/upload', [UploadImageController::class, 'upload'])->name('upload');
+// });
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/profile/{id}', [UserController::class, 'show'])->name('user.profile');
