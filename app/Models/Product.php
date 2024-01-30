@@ -11,10 +11,10 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 class Product extends Model implements HasMedia
 {
     use InteractsWithMedia, HasFactory;
-  //  use HasFactory;
+    //  use HasFactory;
 
-  protected $casts = [
-    'publish_at' => 'datetime:Y-m-d',
+    protected $casts = [
+        'publish_at' => 'datetime:Y-m-d',
     ];
 
     protected $guarded = [];

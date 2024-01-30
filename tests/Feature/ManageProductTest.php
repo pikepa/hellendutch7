@@ -51,11 +51,11 @@ class ManageProductTest extends TestCase
         $response = $this->patch($product->path(), [
             'title' => 'Changed Title',
             'description' => 'New Description',
-            'status'=>'For Sale',
+            'status' => 'For Sale',
             'price' => '10000',
             'discount' => '0',
-            'publish_at'=>'2019-07-02',
-            'owner_id'=>Auth::id(),
+            'publish_at' => '2019-07-02',
+            'owner_id' => Auth::id(),
         ]);
         $this->assertEquals('Changed Title', Product::first()->title);
         $this->assertEquals(1, Product::first()->id);
@@ -98,11 +98,11 @@ class ManageProductTest extends TestCase
             'title' => 'Cool Book Title',
             'slug' => Str::slug('Cool Book Title', '-'),
             'description' => 'Victors Ferfy',
-            'status'=>'For Sale',
+            'status' => 'For Sale',
             'price' => '10000',
             'discount' => '0',
-            'publish_at'=>'2019-07-02',
-            'owner_id'=>Auth::id(),
+            'publish_at' => '2019-07-02',
+            'owner_id' => Auth::id(),
         ];
     }
 }

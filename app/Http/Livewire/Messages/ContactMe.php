@@ -34,10 +34,10 @@ class ContactMe extends Component
         $message = new Message;
 
         Message::create([
-            'name' =>$this->name,
-            'email' =>$this->email,
-            'subject' =>$this->subject,
-            'content' =>$this->content,
+            'name' => $this->name,
+            'email' => $this->email,
+            'subject' => $this->subject,
+            'content' => $this->content,
         ]);
 
         return redirect('/');
